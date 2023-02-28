@@ -3,8 +3,8 @@ package main
 import (
 	"log"
 
-	"github.com/antonioobando92/twitter-go/bd"
-	"github.com/antonioobando92/twitter-go/handlers"
+	"github.com/antonioobando92/twitter-go.git/bd"
+	"github.com/antonioobando92/twitter-go.git/handlers"
 )
 
 func main() {
