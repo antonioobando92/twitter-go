@@ -17,6 +17,8 @@ func Manejadores() {
 
 	// HandleFunc, es una función de gorilla/mux
 	router.HandleFunc("/registro", middlew.ChequeoBD(routers.Registro)).Methods("POST")
+	router.HandleFunc("/login", middlew.ChequeoBD(routers.Login)).Methods("POST")
+	router.HandleFunc("/verperfil", middlew.ChequeoBD(middlew.ValidoJWT(routers.VerPerfil))).Methods("GET")
 
 	PORT := os.Getenv("PORT") // Revisa en el OS si ya esta creado en la variable de entorno
 	if PORT == "" {
