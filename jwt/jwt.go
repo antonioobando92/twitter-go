@@ -16,7 +16,7 @@ func GeneroJWT(t models.Usuario) (string, error) {
 		"apellidos":        t.Apellidos,
 		"fecha_nacimiento": t.FechaNacimiento,
 		"biografia":        t.Biografia,
-		"ubicacion":        t.Ubicación,
+		"ubicacion":        t.Ubicacion,
 		"sitioWeb":         t.SitioWeb,
 		"_id":              t.ID.Hex(),                            // Devuelve el texto mostrando bien en formato hexadecimal
 		"exp":              time.Now().Add(time.Hour * 24).Unix(), // Unix, lo devuelve en formato long, numerico y es bastante rapido
